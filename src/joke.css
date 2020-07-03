@@ -1,0 +1,14 @@
+.JokeContainer {
+  padding: 1.5rem;
+  margin: 5px;
+  font-size: 1.1em;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+}
+.votes {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 2rem;
+}
