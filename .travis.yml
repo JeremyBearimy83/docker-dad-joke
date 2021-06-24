@@ -8,3 +8,15 @@ before_install:
 
 script:
   - docker run -e CI=true jeremybearimy83/docker-dad-joke npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  region: "us-east-2"
+  app: "docker-dad-joke"
+  env: "Dockerdadjoke-env"
+  bucket_name: "elasticbeanstalk-us-east-2-430232161444"
+  bucket_path: "docker-dad-joke"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
