@@ -16,3 +16,5 @@ CMD ["npm", "run", "start"]
 #     stdin_open: true
 
 # docker-compose down && docker-compose up --build
+
+# image tagged as dadjoke
