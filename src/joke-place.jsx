@@ -110,7 +110,7 @@ class JokePlace extends Component {
     return (
       <div className="JokePlace">
         <div className="side-bar">
-          <h1 role="heading">Dad Jokes Dad </h1>
+          <h1 role="heading">Dad Jokes </h1>
           <button onClick={this.handleClick}>More Jokes!</button>
         </div>
 
