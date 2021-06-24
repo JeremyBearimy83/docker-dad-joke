@@ -1,0 +1,18 @@
+FROM node:alpine
+
+WORKDIR "/app"
+
+COPY package.json .
+RUN npm install
+COPY . .
+# DONT NEED COPY AS WE REFERENCE THE FILE ANYWAYS
+
+
+CMD ["npm", "run", "start"]
+
+# docker run -it -p 3000:3000 IMAGE_ID
+
+#   web:
+#     stdin_open: true
+
+# docker-compose down && docker-compose up --build

@@ -1,0 +1,24 @@
+# FROM node:alpine as builder
+FROM node:alpine 
+WORKDIR '/app'
+COPY package.json .
+
+RUN npm install
+COPY . . 
+
+RUN npm run build
+
+# PUTTING A SECOND FROM STATEMENT AUTOMATICALLY SAYS TO TERMINATE PREV BLOCK
+FROM nginx
+
+COPY --from=0 /app/build /usr/share/nginx/html
+
+# RESULTANT IMAGE IS GOING TO BE AS BIG AS NGINX BASE IMAGE + COPY FROM 
+# BUILD (NO DEPENDENCIES FROM THE BUILD PHASE)
+
+
+# DEFAULT COMMAND OF NGINX IS STARTING NGINX
+
+# TO RUN THIS:
+# sudo docker run -p 8080:80 e39c6e79aaa4
+
