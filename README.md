@@ -5,6 +5,8 @@
 4) Travis pushes code to AWS EB
 5) EB builds image, deploys it.
 
+Drawback of this is we don't want EB to build image, it's primary function is to serve the website.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
