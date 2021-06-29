@@ -1,3 +1,10 @@
+##Single Container Setup Flow
+1) Push code to Github.
+2) Travis automatically pulls repo.
+3) Travis builds an image, tests code.
+4) Travis pushes code to AWS EB
+5) EB builds image, deploys it.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
